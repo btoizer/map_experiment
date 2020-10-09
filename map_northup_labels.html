@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./jspsych.js"></script>
+    <script src="./jspsych-free-sort.js"></script>
+    <link rel="stylesheet" href="./jspsych.css"></link>
+  </head>
+  <body></body>
+  
+  <script>
+
+  var trials = {
+    type: 'free-sort',
+    stimuli: ['africa_tag.png', 'asia_tag.png', 'europe_tag.png', 'n-america_tag.png', 'oceania_tag.png', 's-america_tag.png']
+  };
+
+
+  jsPsych.init({
+    timeline: [trials],
+    on_finish: function(){jsPsych.data.displayData();}
+  });
+
+
+  </script>
+</html>
